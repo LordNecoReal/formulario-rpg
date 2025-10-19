@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Aventureiro - RPG</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Registro de Heróis e Vilões</h1>
+        <h2>Prepare-se para a Jornada!</h2>
+        <h3>Preencha sua ficha para entrar na taverna e iniciar sua aventura.</h3>
+    </header>
+
+    <main>
+        <form action="fichapronta.html" method="GET">
+
+            <fieldset>
+                <legend>Dados do Aventureiro</legend>
+
+                <div>
+                    <label for="nome_personagem">Nome do Personagem:</label>
+                    <input type="text" id="nome_personagem" name="nome_personagem" required
+                        placeholder="Ex: Elara, o Mago">
+                </div>
+
+                <div>
+                    <label for="nome_jogador">Seu Nome (Jogador):</label>
+                    <input type="text" id="nome_jogador" name="nome_jogador" required placeholder="Seu nome real">
+                </div>
+
+                <div>
+                    <label for="email_jogador">E-mail:</label>
+                    <input type="email" id="email_jogador" name="email_jogador" required
+                        placeholder="seuemail@mundo.rpg">
+                </div>
+
+                <div>
+                    <label for="telefone">Telefone para contato (Opcional):</label>
+                    <input type="tel" id="telefone" name="telefone"
+                        placeholder="21-99999-6669" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Escolha de Classe</legend>
+                <p>Selecione a classe que define seu estilo de combate e magia:</p>
+
+                <div>
+                    <input type="radio" id="guerreiro" name="classe" value="Guerreiro" required>
+                    <label for="guerreiro">Guerreiro (Força Bruta)</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="mago" name="classe" value="Mago">
+                    <label for="mago">Mago (Magia e Conhecimento)</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="ladino" name="classe" value="Ladino">
+                    <label for="ladino">Ladino (Furtividade e Destreza)</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="clerigo" name="classe" value="Clerigo">
+                    <label for="clerigo">Clérigo (Suporte e Fé)</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="druida" name="classe" value="Druida">
+                    <label for="druida">Druida (Natureza e Transformação)</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="classe_outro_opcao" name="classe" value="Outro_Classe">
+                    <label for="classe_outro_opcao">Outra Classe:</label>
+                    <input type="text" id="classe_outro_texto" name="classe_outro_especificar"
+                        placeholder="Ex: Artífice, Bardo, Monge">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Escolha de Raça</legend>
+
+                <div>
+                    <label for="raca">Selecione sua Raça:</label>
+                    <select id="raca" name="raca_selecionada" required>
+                        <option value="" disabled selected>--- Escolha uma Raça ---</option>
+                        <option value="Humano">Humano</option>
+                        <option value="Elfo">Elfo</option>
+                        <option value="Anao">Anão</option>
+                        <option value="Halfling">Halfling</option>
+                        <option value="Tiefling">Tiefling</option>
+                        <option value="Meio-Orc">Meio-Orc</option>
+                        <option value="Outra_Raca">Outra (especificar abaixo)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="raca_outro_texto">Se Outra Raça, especifique:</label>
+                    <input type="text" id="raca_outro_texto" name="raca_outro_especificar"
+                        placeholder="Ex: Draconato, Goblin, Gnomo">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Arsenal Preferido</legend>
+                <p>Quais tipos de armas você mais gosta de usar (pode escolher mais de um):</p>
+
+                <div>
+                    <input type="checkbox" id="espada_longa" name="arma_preferida" value="Espadas Longas e Lâminas">
+                    <label for="espada_longa">Espadas Longas e Lâminas</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="machado" name="arma_preferida" value="Machados e Armas Pesadas">
+                    <label for="machado">Machados e Armas Pesadas</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="arco" name="arma_preferida" value="Arcos e Bestas">
+                    <label for="arco">Arcos e Bestas</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="cajado" name="arma_preferida" value="Cajados e Varinhas">
+                    <label for="cajado">Cajados e Varinhas (Foco Arcano)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="adaga" name="arma_preferida" value="Adagas e Armas Leves">
+                    <label for="adaga">Adagas e Armas Leves</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="arma_outro_opcao" name="arma_preferida" value="Outra_Arma">
+                    <label for="arma_outro_opcao">Outra Arma (especificar):</label>
+                    <input type="text" id="arma_outro_texto" name="arma_outro_especificar"
+                        placeholder="Ex: Chicote, Zarabatana, Glaive">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Estilo de RPG Favorito</legend>
+                <p>Qual tipo de RPG você mais aprecia (pode escolher mais de um):</p>
+
+                <div>
+                    <input type="checkbox" id="rpg_mesa" name="estilo_rpg" value="RPG de Mesa">
+                    <label for="rpg_mesa">RPG de Mesa (D&D, Tormenta, etc.)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="rpg_turno" name="estilo_rpg" value="RPG de Turno">
+                    <label for="rpg_turno">RPG de Turno (Final Fantasy, Persona)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="rpg_acao" name="estilo_rpg" value="RPG de Ação">
+                    <label for="rpg_acao">RPG de Ação (Diablo, Elden Ring, legend of mana)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="rpg_mmo" name="estilo_rpg" value="MMORPG">
+                    <label for="rpg_mmo">MMORPG (WoW, FF14, Tibia)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="rpg_solo" name="estilo_rpg" value="RPG Single Player">
+                    <label for="rpg_solo">RPG Single Player com Foco em História</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="rpg_outro_opcao" name="estilo_rpg" value="Outro_Estilo">
+                    <label for="rpg_outro_opcao">Outro Estilo (especificar):</label>
+                    <input type="text" id="rpg_outro_texto" name="estilo_rpg_especificar"
+                        placeholder="Ex: Larp, Jogos de Texto">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes Finais</legend> 
+                
+                <div>
+                    <label for="data_nascimento">Data de Criação da Ficha:</label>
+                    <input type="date" id="data_nascimento" name="data_criacao_ficha">
+                </div>
+            </fieldset>
+
+            <div>
+                <button type="submit">Iniciar Aventura!</button>
+                <button type="reset">Limpar Ficha</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Taverna do Lord Neco - Que a sorte esteja com você.</p>
+    </footer>
+
+</body>
+
+</html>
